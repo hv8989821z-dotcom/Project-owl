@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/code.dart';
+import 'package:flutter_application_1/registration_screen.dart';
 
 class Entry2 extends StatelessWidget {
   const Entry2({super.key});
@@ -28,10 +29,7 @@ class Entry2 extends StatelessWidget {
                             const Text("Филин", style: TextStyle(fontSize: 24)),
                             const Text(
                               "Проект по поиску помощи в проектах",
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.black,
-                              ),
+                              style: TextStyle(fontSize: 14, color: Colors.black),
                               softWrap: true,
                             ),
                           ],
@@ -41,11 +39,11 @@ class Entry2 extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 120),
+                  padding: const EdgeInsets.only(top: 120),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 30),
+                      padding: const EdgeInsets.only(left: 30),
                       child: Text(
                         "Регистрация",
                         style: TextStyle(fontSize: 32),
@@ -53,11 +51,10 @@ class Entry2 extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 30),
                     child: Text(
                       "Введите номер телефона",
                       style: TextStyle(fontSize: 14),
@@ -84,8 +81,29 @@ class Entry2 extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 30, right: 30, top: 20),
-                  child: MyBotton(),
+                  padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
+                  child: Column(
+                    children: [
+                      MyBotton(),
+                      const SizedBox(height: 20),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const ProfileFillScreen()),
+                          );
+                        },
+                        child: Text(
+                          "Заполнить профиль",
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: const Color.fromRGBO(33, 173, 252, 1),
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -106,7 +124,7 @@ class MyBotton extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Code2()),
+          MaterialPageRoute(builder: (context) => const Code2()),
         );
       },
       child: Container(

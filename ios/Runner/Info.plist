@@ -68,3 +68,7 @@
 	</array>
 </dict>
 </plist>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Приложению нужен доступ к фото для загрузки документов</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>Приложению нужен доступ к документам для загрузки файлов</string>
