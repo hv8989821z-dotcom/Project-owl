@@ -75,7 +75,7 @@ class MyBotton extends StatelessWidget {
         width: screenWidth * 0.85,
         height: 70,
         decoration: BoxDecoration(
-          color: const Color.fromRGBO(33, 173, 252, 1),
+          color: Color.fromRGBO(94, 71, 61, 1),
           borderRadius: BorderRadius.circular(7),
         ),
         child: const Center(
